@@ -5,17 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <title>MR TURISMO - Acesso ao Contrato</title>  
     <link rel="stylesheet" href="styles.css">  
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .background {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        h1, h2 {
+            margin: 20px 0;
+        }
+        
+        .access-contract {
+            display: inline-block;
+            background: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        
+        canvas {
+            border: 1px solid #000;
+            width: 100%;
+            max-width: 600px;
+            height: 200px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            .background {
+                width: 95%;
+                padding: 15px;
+            }
+        }
+    </style>
 </head>  
 <body>  
     <div class="background">  
         <header>  
             <div class="logo-container">  
-                <img   
-                    src="https://i.postimg.cc/JhH0gzXH/LOGO-MR-TURISMO-BRANCO.png"   
-                    alt="Logo da MR TURISMO"   
-                    class="logo"   
-                    id="logo"  
-                >  
+                <img src="https://i.postimg.cc/JhH0gzXH/LOGO-MR-TURISMO-BRANCO.png" alt="Logo da MR TURISMO" class="logo" id="logo">  
             </div>  
             <h1>MR TURISMO</h1>  
         </header>  
@@ -23,67 +83,63 @@
         <main>  
             <h2>Acesse o seu Contrato</h2>  
             <a href="contract.html" class="access-contract">Clique aqui e acesse o contrato</a>  
+
+            <h2>Assine o Contrato</h2>
+            <canvas id="signature-pad"></canvas>
+            <button id="clear-signature">Limpar Assinatura</button>
+            <button id="submit-contract">Salvar Contrato</button>
         </main>  
 
         <footer>  
             <p>&copy; 2025 MR TURISMO</p>  
         </footer>  
     </div>  
+
+    <script>  
+        const canvas = document.getElementById('signature-pad');  
+        const ctx = canvas.getContext('2d');  
+        let isDrawing = false;  
+        let lastX = 0;  
+        let lastY = 0;  
+
+        ctx.strokeStyle = '#000'; 
+        ctx.lineWidth = 2;  
+
+        canvas.addEventListener('mousedown', (e) => {  
+            isDrawing = true;  
+            [lastX, lastY] = [e.offsetX, e.offsetY];  
+        });  
+
+        canvas.addEventListener('mousemove', (e) => {  
+            if (!isDrawing) return;  
+            ctx.beginPath();  
+            ctx.moveTo(lastX, lastY);  
+            ctx.lineTo(e.offsetX, e.offsetY);  
+            ctx.stroke();  
+            [lastX, lastY] = [e.offsetX, e.offsetY];  
+        });  
+
+        canvas.addEventListener('mouseup', () => {  
+            isDrawing = false;  
+        });  
+
+        canvas.addEventListener('mouseout', () => {  
+            isDrawing = false;  
+        });  
+
+        document.getElementById('clear-signature').addEventListener('click', () => {  
+            ctx.clearRect(0, 0, canvas.width, canvas.height);  
+        });  
+    </script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>  
+    <script>  
+        document.getElementById('submit-contract').addEventListener('click', () => {  
+            const { jsPDF } = window.jspdf;  
+            const pdf = new jsPDF();  
+            pdf.text("Contrato", 10, 10);  
+            pdf.addImage(canvas.toDataURL(), 'PNG', 10, 20, 180, 80);  
+            pdf.save("contrato.pdf");  
+        });  
+    </script>  
 </body>  
-</html>  
-<script>  
-    const canvas = document.getElementById('signature-pad');  
-    const ctx = canvas.getContext('2d');  
-    let isDrawing = false;  
-    let lastX = 0;  
-    let lastY = 0;  
-
-    // Defina a cor e largura da linha  
-    ctx.strokeStyle = '#000'; // Cor preta  
-    ctx.lineWidth = 2; // Espessura da linha  
-
-    // Inicia o desenho  
-    canvas.addEventListener('mousedown', (e) => {  
-        isDrawing = true;  
-        [lastX, lastY] = [e.offsetX, e.offsetY];  
-    });  
-
-    // Desenha no canvas  
-    canvas.addEventListener('mousemove', (e) => {  
-        if (!isDrawing) return; // Não faz nada se não estiver desenhando  
-        ctx.beginPath(); // Começa um novo caminho  
-        ctx.moveTo(lastX, lastY); // Move para a última posição  
-        ctx.lineTo(e.offsetX, e.offsetY); // Desenha até a nova posição  
-        ctx.stroke(); // Aplica o traço  
-        [lastX, lastY] = [e.offsetX, e.offsetY]; // Atualiza as últimas posições  
-    });  
-
-    // Para o desenho  
-    canvas.addEventListener('mouseup', () => {  
-        isDrawing = false;  
-    });  
-
-    // Limpa o canvas  
-    canvas.addEventListener('mouseout', () => {  
-        isDrawing = false; // Para o desenho se o mouse sair do canvas  
-    });  
-
-    // Função para limpar a assinatura  
-    document.getElementById('clear-signature').addEventListener('click', () => {  
-        ctx.clearRect(0, 0, canvas.width, canvas.height); // Limpa o canvas  
-    });  
-</script>  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>  
-<script>  
-    document.getElementById('submit-contract').addEventListener('click', () => {  
-        const { jsPDF } = window.jspdf;  
-        const pdf = new jsPDF();  
-
-        // Adiciona texto ao PDF  
-        pdf.text("Contrato", 10, 10);  
-        pdf.addImage(canvas.toDataURL(), 'PNG', 10, 20, 180, 80); // Adiciona a assinatura  
-
-        // Salva o PDF  
-        pdf.save("contrato.pdf");  
-    });  
-</script>  
+</html>
