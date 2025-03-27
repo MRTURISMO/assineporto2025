@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrato de Prestação de Serviços - Viagem Porto Seguro 2025</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        form {
+            display: flex;
+            flex-direction: column; /* Alinhar os itens na vertical */
+            margin-bottom: 20px; /* Espaçamento entre os formulários */
+        }
+
+        label {
+            margin-top: 10px; /* Espaçamento acima do label para melhor visualização */
+        }
+
+        input, select {
+            margin-top: 5px; /* Margem entre o label e o input/select */
+            width: 100%; /* Garantir que os inputs e selects ocupem toda a largura disponível */
+        }
+    </style>
+</head>
+<body>
+    <div class="contract-header">
+        <img src="https://i.postimg.cc/cLrsQLRj/CABE-ALHO.png" alt="Cabeçalho do Contrato" class="header-image">
+    </div>
+
+    <div class="contract-container">
+        <h1>CONTRATO DE PRESTAÇÃO DE SERVIÇOS – VIAGEM PORTO SEGURO 2025</h1>
+        <p>
+            Pelo presente instrumento particular de contrato de prestação de serviços, cuja finalidade é a realização da viagem com
+            destino à cidade de Porto Seguro – BA, firmam as partes, de um lado, o CONTRATADO, a empresa MR FORMATURAS E TURISMO,
+            inscrita sob o CNPJ 24.621.595/0001-60, localizada no endereço SCRS 502, Bloco C, Loja 37, Asa Sul, Brasília – DF,
+            CEP 70330-530, telefones (61) 98436-1242 ou (61) 99653-9062. Neste ato, representada pelo Sr. Rogério Ferreira da Silva,
+            portador do CPF nº 400.263.371-34, e pelo Sr. Ruan Felipe Carvalho da Silva, portador do CPF nº 042.939.141-29, e, de outro
+            lado, o CONTRATANTE, cujos dados seguem abaixo.
+        </p>
+    </div>
+
+    <h2>DADOS DO CONTRATANTE – RESPONSÁVEL PELO PASSAGEIRO</h2>
+    <form>
+        <label for="nomeContratante">NOME:</label>
+        <input type="text" id="nomeContratante" name="nomeContratante" required>
+
+        <label for="cpfContratante">CPF:</label>
+        <input type="text" id="cpfContratante" name="cpfContratante" required>
+
+        <label for="rgContratante">RG:</label>
+        <input type="text" id="rgContratante" name="rgContratante" required>
+
+        <label for="orgaoExpedidorContratante">ÓRGÃO EXPEDIDOR:</label>
+        <input type="text" id="orgaoExpedidorContratante" name="orgaoExpedidorContratante" required>
+
+        <label for="enderecoContratante">ENDEREÇO:</label>
+        <input type="text" id="enderecoContratante" name="enderecoContratante" required>
+
+        <label for="cepContratante">CEP:</label>
+        <input type="text" id="cepContratante" name="cepContratante" required>
+
+        <label for="telefoneContratante">TELEFONE / WHATSAPP:</label>
+        <input type="text" id="telefoneContratante" name="telefoneContratante" required>
+
+        <label for="emailContratante">E-MAIL:</label>
+        <input type="email" id="emailContratante" name="emailContratante" required>
+
+        <label for="grauParentesco">GRAU DE PARENTESCO COM O PASSAGEIRO:</label>
+        <select id="grauParentesco" name="grauParentesco" required>
+            <option value="pai_mae">PAI / MÃE</option>
+            <option value="avo_ava">AVÔ / AVÓ</option>
+            <option value="tio_tia">TIO / TIA</option>
+            <option value="primo_prima">PRIMO / PRIMA</option>
+            <option value="sogro_sogra">SOGRO / SOGRA</option>
+            <option value="nenhum">NENHUM GRAU DE PARENTESCO</option>
+        </select>
+    </form>
+
+    <h2>DADOS DO PASSAGEIRO – AQUELE QUE IRÁ VIAJAR</h2>
+    <form>
+        <label for="nomePassageiro">NOME:</label>
+        <input type="text" id="nomePassageiro" name="nomePassageiro" required>
+
+        <label for="rgPassageiro">RG:</label>
+        <input type="text" id="rgPassageiro" name="rgPassageiro" required>
+
+        <label for="orgaoExpedidorPassageiro">ÓRGÃO EXPEDIDOR:</label>
+        <input type="text" id="orgaoExpedidorPassageiro" name="orgaoExpedidorPassageiro" required>
+
+        <label for="cpfPassageiro">CPF:</label>
+        <input type="text" id="cpfPassageiro" name="cpfPassageiro" required>
+
+        <label for="dataNascimento">DATA DE NASCIMENTO:</label>
+        <input type="date" id="dataNascimento" name="dataNascimento" required>
+
+        <label for="sexo">SEXO:</label>
+        <select id="sexo" name="sexo" required>
+            <option value="" disabled selected>Selecione o sexo</option>
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+            <option value="outro">Outro</option>
+        </select>
+
+        <label for="telefoneWhats">TELEFONE / WHATSAPP:</label>
+        <input type="tel" id="telefoneWhats" name="telefoneWhats" required>
+
+        <label for="email">E-MAIL:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="escola">ESCOLA:</label>
+        <input type="text" id="escola" name="escola" required>
+
+        <label for="turma">TURMA:</label>
+        <input type="text" id="turma" name="turma" required>
+
+        <label for="tamanhoCamiseta">TAMANHO DE CAMISETA:</label>
+        <select id="tamanhoCamiseta" name="tamanhoCamiseta" required>
+            <option value="" disabled selected>Selecione o tamanho</option>
+            <option value="PP">PP</option>
+            <option value="P">P</option>
+            <option value="M">M</option>
+            <option value="G">G</option>
+            <option value="GG">GG</option>
+            <option value="EXG">EXG</option>
+        </select>
+    </form>
+</body>
+</html>
+
+    </select>
+</form>
+
+    </select>  
+</form>   <!DOCTYPE html>  
+<html lang="pt-BR">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Contrato de Prestação de Serviços - CLÁUSULAS, TERMOS E CONDIÇÕES</title>  
+    <link rel="stylesheet" href="styles.css">  
+</head>  
+<body>  
+<style>  
+    .contract-container h1, .contract-container h2 {  
+        font-size: 24px; /* Altere o valor para aumentar ou diminuir o tamanho da fonte */  
+        margin: 0; /* Remove margens para uniformidade, se desejado */  
+    }  
+</style>  
+
+<div class="contract-container">  
+    <h1>FICAM ESTABELECIDAS AS SEGUINTES CLÁUSULAS, TERMOS E CONDIÇÕES.</h1>  
+    <h2>CLÁUSULA PRIMEIRA – DO CONTRATO</h2>  
+</div>  
+        <p>O presente contrato é parte integrante e indissociável do Contrato de Prestação de Serviços, que tem por finalidade a realização da viagem, e assim deve ser interpretado de forma conjunta. Em caso de divergência entre o que aqui está apresentado e informações passadas, deverão prevalecer, para todos os fins de direito, as disposições deste termo.</p>  
+
+        <h3>1.1 – CONDIÇÃO DE PARTICIPAÇÃO</h3>  
+        <p>A participação na viagem depende da assinatura deste termo, acompanhada de uma cópia do documento original com foto do passageiro e de seu responsável. É OBRIGATÓRIO que todos os campos do contrato sejam preenchidos de forma legível.</p>  
+
+        <h3>1.2 - ISENÇÃO DA RESPONSABILIDADE DA ESCOLA</h3>  
+        <p>A escola não tem participação direta na realização da viagem e, portanto, é isenta de qualquer responsabilidade relacionada às atividades propostas. A escola serve apenas como um facilitador para o contato entre a empresa contratada e os alunos/responsáveis. Todas as questões relacionadas à viagem devem ser tratadas diretamente entre a empresa e os responsáveis que assinaram o contrato.</p>  
+
+        <h3>1.3 - ACOMPANHAMENTO DA ESCOLA</h3>  
+        <p>Embora a escola não participe diretamente, como cortesia, para cada 20 contratos fechados, terá direito a escolher 1 membro do corpo docente para acompanhar a viagem. Essa escolha será feita pela direção escolar, sem qualquer interferência da empresa. O membro escolhido terá direito aos mesmos itens, produtos e serviços oferecidos aos demais participantes.</p>  
+
+        <h3>1.4 - INTRANSFERIBILIDADE DO PACOTE</h3>  
+        <p>O pacote de viagem é PESSOAL E INTRANSFERÍVEL. Após a assinatura, este contrato não poderá ter sua titularidade alterada. Se o passageiro não estiver mais interessado em participar da viagem ou dos eventos relacionados (como passeios e festas), deverá solicitar o cancelamento do contrato ou do evento, conforme descrito na cláusula oitava.</p>  
+
+        <h3>1.5 – INFORMAÇÕES SOBRE A VIAGEM</h3>  
+        <p>A viagem tem como destino a cidade de Porto Seguro – Bahia, com duração de 6 noites e 7 dias. A data de saída (embarque) está prevista para 11 de outubro de 2025, com retorno programado para 18 de outubro de 2025. O total da viagem poderá chegar a até 9 dias, dependendo da modalidade de transporte escolhida. Importante: a data da viagem pode ser alterada, e quaisquer mudanças serão comunicadas com pelo menos 60 dias de antecedência.</p>  
+
+        <h3>1.6 – POSSÍVEIS ADIAMENTOS</h3>  
+        <p>Em casos de desastres naturais, epidemias, pandemias ou situações de calamidade pública, a viagem pode ser adiada para garantir a saúde, segurança e bem-estar dos passageiros e suas famílias. Nesse caso, a viagem poderá ser reagendada para um prazo mínimo de 12 meses após a data originalmente prevista, seguindo os protocolos vigentes.</p>  
+
+        <h3>1.7 – USO DA IMAGEM</h3>  
+        <p>Durante a viagem, a equipe da MR fará a cobertura dos eventos por meio de fotos e vídeos, que poderão ser utilizados em material publicitário (como outdoors, panfletos, redes sociais, etc.). Se o passageiro ou seu responsável não desejar ter sua imagem utilizada, deverá enviar um e-mail para <strong>contato@mrturismobsb.com.br</strong> solicitando a não utilização de sua imagem para esses fins.</p>  
+    </div>  
+    <div class="contract-container">  
+
+    <title><h1>CLÁUSULA SEGUNDA – MEIO DE TRANSPORTE</h1></title>  
+        <p>A modalidade de transporte oferecida é TERRESTRE. O tipo de veículo utilizado dependerá do número total de passageiros e poderá incluir: Vans Executivas, Micro-ônibus Executivos, Ônibus Executivos ou Ônibus LD/DD. A alocação dos passageiros nos ônibus será feita de acordo com a ordem de entrega dos contratos, sendo que os primeiros contratos entregues terão prioridade nos primeiros ônibus. Não é garantido que os passageiros da mesma escola fiquem no mesmo ônibus. Se o número de passageiros exceder a capacidade dos veículos disponíveis, um transporte adicional será providenciado imediatamente.</p>  
+        
+        <h3>2.1 – DURAÇÃO DA VIAGEM</h3>  
+        <p>A viagem entre Brasília-DF e Porto Seguro-BA tem duração aproximada de 24 horas, com paradas programadas para hidratação e alimentação, sendo por conta do passageiro a despesas e custos com alimentação e bebidas durante o trajeto.</p>  
+        
+        <h3>2.2 – LOCAL DE EMBARQUE</h3>  
+        <p>Será estipulado um único local de embarque para todos os passageiros. E no dia e horário marcado os mesmos deverão se deslocar até o local previamente informado para realizar o embarque.</p>  
+
+        <h3>2.3 – ESCOLHA DOS ASSENTOS</h3>  
+        <p>Com 10 dias antes da viagem, será enviado no grupo de passageiros, o mapa do ônibus, onde cada passageiro poderá escolher o seu assento. Não serão aceitas reclamações aos passageiros que por qualquer motivo, não escolherem ou perderem o prazo para escolha.</p>  
+
+        <h3>2.4 – ESCOLHA DOS ASSENTOS (LIMITAÇÕES FÍSICAS)</h3>  
+        <p>Passageiros que possuem limitações físicas ou qualquer tipo de transtorno, e que tenham a necessidade expressa de viajarem na parte de baixo ou na parte que tenha menos barulho, deverão apresentar um laudo médico, para que possa ser ofertado a prioridade da escolha dos assentos. O passageiro que não possuir laudo, demonstrando a necessidade, deverá ficar atento às informações da empresa, para que possa escolher o melhor assento disponível.</p>  
+
+        <h3>2.5 – INSPEÇÃO TÉCNICA DOS ÔNIBUS</h3>  
+        <p>Os ônibus oferecidos passam por uma inspeção técnica de toda a equipe da MR TURISMO, onde são verificados itens e acessórios, assim como documentações e vistorias prévias. Entretanto, por se tratarem de máquinas, possíveis falhas, quebras ou afins, são sujeitas a ocorrerem. Caso haja, durante a viagem, algum empecilho, a empresa compromete-se a ofertar um novo transporte em até 24h após a detecção inicial, esse serviço é denominado como TRANSBORDO.</p>  
+
+        <h3>2.6 – DO TRANSBORDO</h3>  
+        <p>Caso haja a necessidade de transbordo, a empresa compromete-se a ofertar aos passageiros, alimentação completa, durante o período de aguardo.</p>  
+
+        <h3>2.7 – A PERDA DO EMBARQUE</h3>  
+        <p>A MR TURISMO não se responsabiliza por NO-SHOW, que é a perda do embarque por qualquer motivo. Caso haja, ficará sob a responsabilidade do passageiro e de seus responsáveis a compra ou manutenção de uma nova passagem.</p>  
+
+        <h3>2.8 – LIMITE DE BAGAGEM</h3>  
+        <p>Cada passageiro poderá embarcar com 01 (uma) mala de viagem e 01 (uma) bagagem de mão. Não serão permitidos o embarque de coolers, caixas de isopor e afins.</p>  
+
+	<h3>2.9 – FORNECIMENTO DE BEBIDAS E ALIMENTOS</h3>  
+        <p>A empresa compromete-se a ofertar água mineral sem gás a cada passageiro, mas é aconselhado a cada passageiro, que possa ter consigo, alimentos e bebidas para hidratação durante o trajeto. A alimentação do passageiro, durante o trajeto (ida e volta) é de inteira responsabilidade do passageiro; é aconselhado que cada passageiro leve uma quantia em dinheiro, para evitar transtornos com a falta de comunicação de pagamentos via PIX ou CARTÕES.</p>  
+        
+        <h3>2.10 – ITENS ESSENCIAIS</h3>  
+        <p>A empresa aconselha a cada passageiro que possa ter consigo, cobertores/ mantas, roupas de frio, e travesseiro durante o período de transporte, uma vez que não é possível realizar a viagem com o sistema de ar-condicionado desligado.</p>  
+        
+        <h3>2.11 – OPÇÃO DO TRANSPORTE TERRESTRE</h3>  
+        <p>O passageiro poderá optar pela viagem na modalidade AÉREO. Entretanto, antes de finalizar a assinatura do contrato, a empresa fará a cotação do valor referente à passagem aérea. Feita a cotação, a empresa enviará ao interessado os valores atualizados em até 72h úteis. Sendo do interesse do CONTRATANTE, daremos prosseguimento ao contrato.</p>  
+        
+        <h3>2.12 – PAGAMENTO DO PACOTE AÉREO</h3>  
+        <p>Após a aprovação dos valores na modalidade de transporte AÉREO, o passageiro deverá efetuar o pagamento de 20% referente ao valor total do contrato, para que sejam asseguradas as passagens previamente cotadas. A passagem aérea será comprada em nome do PASSAGEIRO, não podendo essa mudar a sua titularidade em nenhum momento. O passageiro que optar pelo pacote AÉREO e vier a desistir da viagem ficará condicionado às regras de cancelamento da companhia e também às regras de cancelamento previstas neste contrato.</p>  
+        
+        <h3>2.13 – COMPRA DIRETA DA PASSAGEM AÉREA</h3>  
+        <p>O passageiro poderá optar por adquirir a passagem diretamente na companhia aérea de sua preferência, inclusive utilizando programas de milhagem ou outro serviço de sua preferência. Caso o mesmo efetue a compra diretamente com a companhia, o valor do pacote de viagem terá a redução da passagem terrestre, no valor de R$300,00. Entretanto, aquele passageiro que adquirir a sua passagem na modalidade aérea, de apenas um trecho (ida ou volta), não terá abatimento de valores, uma vez que a poltrona destinada ao passageiro não será utilizada.</p>  
+        
+        <h3>2.14 – O EMBARQUE AÉREO</h3>  
+        <p>O embarque do passageiro que optar pelo pacote AÉREO será no dia 12 de Outubro de 2025. O horário de saída ou chegada à Porto Seguro é de inteira responsabilidade da companhia aérea, não sendo passível de reclamações o tempo de viagem, horário, possíveis conexões ou paradas. Ao desembarcar em Porto Seguro, uma equipe estará aguardando o passageiro para levá-lo ao hotel. Durante toda a semana, ele terá os mesmos direitos e deveres dos passageiros que optarem pelo pacote TERRESTRE. O deslocamento do passageiro até o aeroporto de embarque é de inteira responsabilidade do passageiro e de seus responsáveis.</p>  
+        
+        <h3>2.15 – RETORNO AÉREO</h3>  
+        <p>O retorno do passageiro que optar pelo pacote AÉREO será no dia 18 de outubro de 2025, em horário determinado pela companhia aérea. Uma equipe acompanhará o passageiro até o check-in.</p>  
+    </div>  
+</body>  
+
+    <title>Contrato de Prestação de Serviços - <h1>CLÁUSULA TERCEIRA - HOSPEDAGEM E ALIMENTAÇÃO</title>  
+    <link rel="stylesheet" href="styles.css">  
+</head>  
+<body>  
+    <div class="contract-container">  
+        <h1>CLÁUSULA TERCEIRA – HOSPEDAGEM E ALIMENTAÇÃO</h1>  
+        <p>A hospedagem será em hotel da rede PORTO BELLO, especificamente no PORTO BELLO PARK HOTEL, localizado a 350 metros da Praia de Taperapuan.</p>  
+
+        <h3>3.1 – ACOMODAÇÕES</h3>  
+        <p>As acomodações são feitas em quartos QUÁDRUPLOS. A relação de integrantes dos quartos é preenchida pelos próprios passageiros, não havendo interferência da escolha dos integrantes por parte da empresa. Entretanto, aconselhamos aos passageiros que realizem a divisão de quartos em quartos masculinos e femininos.</p>  
+
+        <h3>3.2 – PREENCHIMENTO DOS QUARTOS</h3>  
+        <p>Se, após a seleção, um quarto tiver menos de 4 ocupantes, a empresa preencherá a vaga com outra pessoa, que pode ser um passageiro adicional, um membro da equipe de monitoria ou um professor. Reclamações sobre essa inclusão não serão aceitas.</p>  
+
+        <h3>3.3 - REACOMODAÇÃO DE QUARTOS</h3>  
+        <p>Se um quarto tiver 3 ou menos ocupantes, ele poderá ser desfeito, e cada pessoa será realocada em outro quarto.</p>  
+
+        <h3>3.4 - ESTRUTURA DO HOTEL</h3>  
+        <p>O hotel dispõe de toda a estrutura de acomodação e lazer, oferecendo aos passageiros piscinas, sauna, academia e salão de jogos. Caso não seja possível a acomodação no hotel oferecido, a empresa compromete-se a oferecer outro que tenha a mesma estrutura.</p>  
+
+        <h3>3.5 – ROUPAS DE CAMA E BANHO</h3>  
+        <p>O hotel disponibiliza a cada passageiro roupas de banho e cama. O uso de ambos é restrito ao quarto do hotel. O passageiro que quiser levar roupa de banho do hotel para piscina ou praia deverá arcar com os custos de aluguel, sendo tratados diretamente com o hotel.</p>  
+
+        <h3>3.6 - ALIMENTAÇÃO EM PORTO</h3>  
+        <p>A alimentação em Porto Seguro é realizada em nosso hotel. Todos os dias, são oferecidos o CAFÉ DA MANHÃ e o JANTAR. Dentro do cronograma de atividades em Porto Seguro, está prevista a troca da alimentação no último dia. Portanto, serão oferecidos: 06 dias de café da manhã, 06 dias de jantar e 01 dia de almoço.</p>  
+    </div>  
+
+    <div class="contract-container">  
+
+    <title>Contrato de Prestação de Serviços - <h1>CLÁUSULA QUARTA –– DOS PASSEIOS E PROGRAMAÇÃO NOTURNA</title>   
+<p>Durante a viagem, os passageiros terão acesso a uma programação diária que incluirá passeios aos principais pontos turísticos da região, bem como festas diurnas e noturnas.</p>  
+
+<h3>4.1 – PASSEIOS OFERECIDOS:</h3>  
+<p>Os passeios oferecidos são para: às Barracas de Praia Tôa-Tôa, Axé Moi e Barramares. O City Tour (passeio pela cidade histórica) e Pasarela do descobrimento.</p>  
+
+<h3>4.2 – PASSEIOS ADICIONAIS:</h3>  
+<p>Poderão haver passeios adicionais. Os mesmos não são oferecidos em contrato, pois não é possível ainda assegurar e/ou garantir a sua realização e viabilidade. Caso haja, os passeios adicionais, serão OPICIONAIS e poderão ser adquiridos até o dia do embarque, sendo, os mesmos informados sobre roteiros, dias, horários e valores com até 45 dias antes da datada viagem.</p>  
+
+<h3>4.3 – SOBRE AS FESTAS:</h3>  
+<p>As festas que serão realizadas em Porto Seguro, serão realizadas pela empresa e seus parceiros, a escolha dos artistas e atrações será feita com base na escolha e votação dos nossos passageiros. As festas poderão ser adquiridas com até 06 meses de antecedência da realização da viagem. As festas são divididas entre diurnas e noturnas. Ao todo, serão até 09 (nove) festas ofertadas.</p>  
+
+<h3>4.4 - O PACOTE OURO:</h3>  
+<p>O passageiro que fechar o contrato no PACOTE OURO, terá direito a participação em todas as festas. Caso o mesmo não tenha interesse em participar de determinada festa, evento ou passeio, ele NÃO PODERÁ repassar seu convite ou ingresso a outro passageiro.</p>  
+
+<h3>4.5 - O PACOTE PRATA:</h3>  
+<p>O passageiro que fechar o contrato no PACOTE PRATA, terá apenas a Pool Party (festa na piscina do hotel) inclusa no seu pacote. Caso tenha interesse de participar das demais, ele poderá adquirir o pacote ou as festas avulsas. A relação das festas, assim como, as atrações, horários, locais, são informadas aos nossos passageiros, nos grupos de WhatsApp, assim como em nossas redes sociais. Durante a nossa viagem, haverão programações noturnas diárias.</p>  
+
+<h3>4.6 – SAÍDA DO HOTEL:</h3>  
+<p>O passageiro que optar por não participar de determinada festa ou passeio que aconteça em período DIURNO, PODERÁ SAIR NORMALMENTE DO HOTEL, uma vez que, durante o dia, a equipe de monitoria, garante aos passageiros a segurança necessária para desenvolvimento das atividades.</p>  
+
+<h3>4.7 – SAÍDA DO HOTEL:</h3>  
+<p>O passageiro que optar por não participar de determinada festa ou passeio que aconteça em período NOTURNO, NÃO PODERÁ SAIR DO HOTEL, uma vez que, não será possível garantir a esse passageiro a segurança necessária.</p>  
+
+<h3>4.8 – AQUISIÇÃO DE OUTROS INGRESSOS:</h3>  
+<p>O passageiro, que adquirir convites ou ingressos, para outros festivais, shows, apresentações ou festas que não sejam as oferecidas ou vendidas pela empresa NÃO TERÁ SUA SAÍDA AUTORIZADA pela empresa.</p>  
+
+<h3>4.9 – AUTORIZAÇÃO PARA SAÍDA:</h3>  
+<p>O passageiro que sair sem a devida autorização da empresa ou autorização expressa do pai ou responsável, poderá ter o seu contrato rescindido. Ainda que esse passageiro seja maior de idade, a sua autorização dependerá da empresa.</p>  
+
+<h3>4.10 – O passageiro que adquirir o pacote de festas, e não venha a participar de alguma, independentemente do motivo, NÃO terá o seu valor restituído.</h3>  
+    <div class="contract-container">  
+
+    <title>Contrato de Prestação de Serviços - <h1>CLAUSULA QUINTA - É DE RESPONSABILIDADE DO PASSAGEIRO</title>  
+<p>Os passageiros são responsáveis pelo uso, transporte e guarda de seus aparelhos eletrônicos, dinheiro, joias e itens pessoais durante a viagem. A empresa não se responsabiliza por objetos perdidos, extraviados ou furtados, mas se compromete a auxiliar com orientações para registro de queixas ou boletins de ocorrência, caso isso ocorra.</p>  
+
+<h3>5.1 – FICHA MÉDICA:</h3>  
+<p>Todos os passageiros e seus responsáveis devem preencher a Ficha Médica, um documento obrigatório de extrema importância para o desenvolvimento das atividades em Porto Seguro. Essa ficha conterá informações relevantes que auxiliarão a equipe de enfermagem na assistência durante a viagem. O não preenchimento da ficha resultará no bloqueio do embarque do passageiro até que a mesma seja apresentada.</p>  
+
+<h3>5.2 – USO DE MEDICAMENTOS:</h3>  
+<p>Cada passageiro deverá portar seus medicamentos de uso habitual, incluindo medicamentos controlados ou de uso contínuo, e reportá-los à equipe de enfermagem. Passageiros que utilizam medicamentos controlados ou contínuos receberão atendimento prioritário em caso de emergências médicas.</p>  
+
+<h3>5.3 - RETORNO POR PROBLEMAS DE SAÚDE:</h3>  
+<p>Caso um passageiro apresente problemas de saúde durante a viagem que o impeçam de permanecer com o grupo e necessite retornar, a empresa arcará com os custos desse retorno.</p>  
+
+<h3>5.4 – REPASSE DE INFORMAÇÕES:</h3>  
+<p>É responsabilidade de cada passageiro manter seus pais ou responsáveis informados sobre qualquer informação relevante relacionada à viagem.</p>  
+
+<h3>5.5 - ATUALIZAÇÃO DE CADASTRO:</h3>  
+<p>Os passageiros e seus responsáveis, devem manter os dados de contato sempre atualizados. Mudanças de telefone, e-mail, endereço ou nome social devem ser comunicadas à empresa para garantir uma comunicação eficaz.</p>  
+    <div class="contract-container">  
+
+    <title>Contrato de Prestação de Serviços - <h1>CLÁUSULA SEXTA – É DE RESPONSABILIDADE DO PASSAGEIRO E DE SEUS RESPONSÁVEIS</title> 
+<p>Para garantir a segurança, o bem-estar e a integridade de cada passageiro, é absolutamente proibido o consumo de bebidas alcoólicas por menores de idade e o uso de substâncias ilícitas durante a viagem. Por isso, é essencial a participação dos pais ou responsáveis na elaboração e verificação da bagagem de cada passageiro.</p>  
+
+<h3>6.1 – CONSEQUÊNCIA DO USO DE SUBSTÂNCIAS:</h3>  
+<p>O passageiro que for flagrado fazendo uso de bebidas alcoólicas (se menor de idade) ou de substâncias ilícitas (geral), que coloque em risco a segurança ou a integridade física dele e/ou dos demais, será imediatamente comunicado ao responsável, e a situação será discutida entre as partes para determinar a continuidade da viagem. Em casos de reincidência ou se a situação se tornar descontrolada, a empresa poderá solicitar o retorno do passageiro à sua cidade de embarque, sendo as despesas desse retorno de responsabilidade do responsável pelo passageiro. Os valores já pagos não serão restituídos.</p>  
+
+<h3>6.2 – ALUGUEL DE VEÍCULOS / ACOMODAÇÕES:</h3>  
+<p>Visando garantir a segurança de todos os passageiros, não serão permitidos aluguéis de qualquer meio de locomoção ou acomodação própria em Porto Seguro, incluindo, mas não se limitando a, carros, motos, buggys, jet-ski, apartamentos e casas. Além disso, em hipótese alguma, será permitida a saída de passageiros desacompanhados da equipe de monitoria durante o período noturno. Acompanhamentos supervisionados serão realizados diariamente por uma equipe de monitores durante passeios, festas e visitas às praias, em horários previamente definidos pela equipe de coordenação.</p>  
+    <div class="contract-container">  
+
+
+    <title>Contrato de Prestação de Serviços - <h1>CLÁUSULA SÉTIMA – É DE RESPONSABILIDADE DA EMPRESA</title> 
+<p>A empresa se compromete a assegurar o bom andamento da viagem e a qualidade dos serviços prestados, estando disponível para esclarecer dúvidas e fornecer informações durante todo o período de vigência do contrato. A empresa realiza visitas frequentes às escolas; portanto, para atendimento presencial na unidade do escritório, é necessário agendar previamente.</p>  
+
+<h3>7.1 – COMUNICAÇÃO DURANTE A VIAGEM:</h3>  
+<p>A empresa manterá os passageiros, pais e responsáveis informados durante a viagem. A comunicação será realizada por meio de WhatsApp, através de conversas individuais ou grupos, e e-mails. Um grupo será criado com os passageiros para facilitar a comunicação, e outro grupo no WhatsApp será criado para os responsáveis, onde serão repassadas informações sobre a viagem.</p>  
+
+<h3>7.2 – GRUPO DOS PAIS:</h3>  
+<p>No grupo dos responsáveis, serão enviadas fotografias em grupo, vídeos, informações sobre localização e programação diariamente. Entretanto, a empresa não se compromete a enviar fotos individuais de cada passageiro, tornando essa responsabilidade do próprio passageiro.</p>  
+
+<h3>7.3 – ESTRUTURA OFERECIDA:</h3>  
+<p>A empresa garantirá acompanhamento durante todos os passeios, festas e atividades, com a presença de 01 monitor para cada 10 passageiros, 01 enfermeiro e 01 segurança, disponíveis 24 horas por dia durante toda a viagem. Em todos os passeios e/ou festas, serão montados pontos de apoio com equipe de monitoria e enfermaria, para garantir ao passageiro um atendimento adequado a sua necessidade.</p>  
+    <div class="contract-container">  
+
+
+    <title>Contrato de Prestação de Serviços - <h1>CLÁUSULA OITAVA – DO CANCELAMENTO DO CONTRATO E/OU SEUS IMPEDIMENTOS</title> 
+<p>É IMPEDIDO de realizar o embarque, o passageiro que estiver com mensalidade(s) em atraso. O passageiro que estiver com mensalidades vencidas a um prazo superior a 60 dias, a empresa poderá automaticamente abrir a vaga para outro interessado, sendo informado via e-mail ao passageiro sob a suspensão contratual.</p>  
+    <div class="contract-container">  
+<h3>8.1 – A SUSPENSÃO CONTRATUAL:</h3>  
+<p>A ocorrer quando o passageiro estiver com 02 ou mais mensalidades em atraso, e que após as tratativas e/ou tentativas de negociação terem sido frustradas. Nesse caso, será aberto um prazo de 10 dias para a regularização. Findado esse prazo, o contrato será automaticamente CANCELADO. Em caso de cancelamento do contrato, o mesmo irá gerar custos de cancelamento.</p>  
+
+<h3>8.2 – CANCELAMENTO A PEDIDO:</h3>  
+<p>O contrato poderá ser cancelado A PEDIDO da parte contratante. Nesse caso, a parte contratante manifesta voluntariamente o interesse em desistir de prosseguir com o contrato. Caso haja, a parte contratante deverá solicitar o cancelamento, devendo ser encaminhadas as solicitações ao e-mail – <a href="mailto:cancelamento@mrturismobsb.com.br">cancelamento@mrturismobsb.com.br</a>. O prazo para respostas de e-mails de cancelamentos é de até 72h úteis.</p>  
+
+<h3>8.3 – PRAZO PARA CANCELAMENTO:</h3>  
+<p>O cancelamento poderá ser solicitado até a data do embarque. Não sendo possível realizar cancelamentos durante ou após a viagem ser realizada. De acordo com o Código de Defesa do Consumidor (CDC), especificamente no Artigo 49, o consumidor tem o direito de cancelar um contrato de serviço realizado fora do estabelecimento comercial em um prazo de sete dias, contados a partir da assinatura do contrato. Este prazo é conhecido como direito de arrependimento. Se o cancelamento for solicitado dentro do prazo de 7 dias, deve ser feito sem a incidência de multas ou penalidades, e o consumidor deve ser reembolsado por valores pagos, caso já tenha efetuado algum; esses valores serão restituídos no prazo máximo de 30 dias.</p>  
+
+<h3>8.4 – CONDIÇÕES E TAXAS DE CANCELAMENTO:</h3>  
+<p>Após passado o prazo do direito ao arrependimento, a empresa MR TURISMO inicia de maneira imediata o repasse de valores referentes àquele contrato, aos seus fornecedores. Havendo a solicitação de cancelamento em período posterior a 08 dias após a assinatura, ficam estipuladas as seguintes condições e taxas de cancelamento:</p>  
+<ul>  
+    <li>Solicitação feita de 01 a 07 dias após a assinatura – SEM MULTA CONTRATUAL</li>  
+    <li>Solicitação feita a partir do 8º dia após a assinatura – MULTA DE 20% DO VALOR TOTAL DO CONTRATO.</li>  
+    <li>Solicitação feita 30 dias antes da viagem – MULTA DE 60% DO VALOR DO CONTRATO.</li>  
+    <li>Solicitação feita 15 dias antes da viagem NÃO HAVERÁ RESTITUIÇÃO DE VALORES.</li>  
+<h3>8.5 – MULTA CONTRATUAL:</h3>  
+<p>O passageiro que assinar o seu contrato, com um prazo inferior a 30 dias da viagem, e que venha a desistir, terá sua multa contratual fixada em 50% do valor do contrato.</p>  
+
+<h3>8.6 – RESTITUIÇÃO DE VALORES:</h3>  
+<p>O passageiro que já estiver efetuado o pagamento da viagem, e decida cancelar o seu contrato, terão seus valores de multas abatidos. Caso o valor pago seja superior ao valor da multa, a empresa compromete-se a restituir o saldo restante da mesma maneira que lhe foram recebidos, ou seja, o passageiro que efetuou os pagamentos da viagem de maneira parcelada, receberá seus valores de maneira parcelada e divididos na quantidade de parcelas que foram pagos. O prazo para início das devoluções é de 30 dias após a solicitação do cancelamento.</p>  
+
+<h3>8.7 – COBRANÇA EM CASO DE NÃO COMUNICAÇÃO:</h3>  
+<p>O contrato que assinado, mas que não tenha seus pagamentos iniciados, ou que o passageiro decida não mais participar, e não comunique a empresa, a empresa poderá emitir cobranças eletrônicas, judiciais ou por protestos em cartórios, além de realizar a inserção do nome do titular e/ou do passageiro, em caso de maior de idade, nos órgãos de proteção de crédito – SPC/SERASA.</p>  
+
+<h3>8.8 – CANCELAMENTOS DECORRENTES DE SITUAÇÕES ESPECÍFICAS:</h3>  
+<p>Em caso de cancelamentos decorrentes de situações previstas na CLÁUSULA PRIMEIRA – ITEM 1.6, o contrato ficará sob a luz da Lei 14.186, de 2022 ou qualquer outra medida que trate sobre o assunto.</p>  
+
+<h3>8.9 – CRÉDITO EM CASO DE IMPOSSIBILIDADE DE REALIZAÇÃO DA VIAGEM:</h3>  
+<p>Caso não haja a possibilidade de realização da viagem, por qualquer motivo, a empresa compromete-se a oferecer, em forma de crédito, o uso dos valores pagos por cada passageiro. Esses créditos poderão ser utilizados por um período de até 12 meses após a data prevista de realização da viagem e deverá ser utilizado em uma viagem para a cidade aqui oferecida em contrato.</p>  
+
+    <div class="contract-container">  
+    <title>Contrato de Prestação de Serviços - <h1>CLÁUSULA NONA – DOS PACOTES OFERECIDOS</title> 
+<h3>9.1 – PACOTE DE VIAGEM "PRATA"</h3>  
+<p>O pacote inclui:</p>  
+<ul>  
+    <li><strong>Transporte Terrestre:</strong> com seguro viagem de acordo com a Resolução ANTT nº 19 de 23 de maio de 2002.</li>  
+    <li><strong>Translado:</strong> dentro de Porto Seguro, para passeios e saídas.</li>  
+    <li><strong>Passeios:</strong> para as Barracas de Praia Tôa-Tôa, Axé Moi, City Tour e Passarela do Descobrimento.</li>  
+    <li><strong>Camiseta ou Abadá:</strong> 01 unidade, no tamanho selecionado nos dados do passageiro.</li>  
+    <li><strong>Hospedagem:</strong> no Hotel Porto Bello Park ou similar (7 dias e 6 noites).</li>  
+    <li><strong>Alimentação:</strong> 6 cafés da manhã, 6 jantares e 1 almoço.</li>  
+    <li><strong>Equipe de Monitoria:</strong> com 1 monitor para cada 10 passageiros.</li>  
+    <li><strong>Equipe de Enfermaria:</strong> para suporte de emergência.</li>  
+    <li><strong>Equipe de Segurança:</strong> com 1 segurança para cada 40 passageiros.</li>  
+    <li><strong>Carros de Apoio:</strong> para melhor atender os passageiros e suas necessidades em Porto Seguro.</li>  
+    <li><strong>Acompanhamento de Guias Nativos:</strong> para melhor aproveitamento dos passeios.</li>  
+</ul>  
+
+<h3>9.2 – PACOTE DE VIAGEM "OURO"</h3>  
+<p>O pacote inclui:</p>  
+<ul>  
+    <li><strong>Transporte Terrestre:</strong> com seguro viagem de acordo com a Resolução ANTT nº 19 de 23 de maio de 2002.</li>  
+    <li><strong>Translado:</strong> dentro de Porto Seguro, para passeios e saídas.</li>  
+    <li><strong>Passeios:</strong> para as Barracas de Praia Tôa-Tôa, Axé Moi, City Tour e Passarela do Descobrimento.</li>  
+    <li><strong>Kit Viagem:</strong> contendo 1 camiseta ou 1 abadá e 1 mochila.</li>  
+    <li><strong>Hospedagem:</strong> no Hotel Porto Bello Park ou similar (7 dias e 6 noites).</li>  
+    <li><strong>Alimentação:</strong> 6 cafés da manhã, 6 jantares e 1 almoço.</li>  
+    <li><strong>Equipe de Monitoria:</strong> com 1 monitor para cada 10 passageiros.</li>  
+    <li><strong>Equipe de Enfermaria:</strong> para suporte de emergência.</li>  
+    <li><strong>Equipe de Segurança:</strong> com 1 segurança para cada 40 passageiros.</li>  
+    <li><strong>Carros de Apoio:</strong> para melhor atender os passageiros e suas necessidades em Porto Seguro.</li>  
+    <li><strong>Acompanhamento de Guias Nativos:</strong> para melhor aproveitamento dos passeios.</li>  
+    <li><strong>Pacote de Festas:</strong> com até 9 festas oferecidas durante o período da viagem.</li>  
+</ul>  
+
+</body>  
+</html>  
+    <h4>9.3 - ESCOLHAS E ALTERAÇÕES NO PACOTE</h4>
+    <p>Cada passageiro poderá escolher o pacote que preferir. Se desejar alterar seu pacote em um momento posterior, será considerado o valor do novo pacote na data da alteração.</p>
+    
+    <h4>9.4 – CONDIÇÃO EXCLUSIVA</h4>
+    <p>O passageiro que escolher o PACOTE PRATA e decidir adquirir o PACOTE DE FESTAS/SHOWS posteriormente não terá direito ao KIT VIAGEM, que é uma exclusividade para aqueles que optarem pelo PACOTE OURO.</p>
+        <div class="contract-container">  
+
+    <title>Contrato de Prestação de Serviços - <h1>CLÁUSULA DÉCIMA – DOS VALORES E DAS CONDIÇÕES DE PAGAMENTO</title> 
+<h4>10.1 – Formas de Pagamento</h4>  
+<p>Os pagamentos podem ser realizados através das seguintes maneiras:</p>  
+<ul>  
+    <li>À VISTA</li>  
+    <li>BOLETO BANCÁRIO</li>  
+    <li>CARTÃO DE CRÉDITO</li>  
+</ul>  
+    
+    <h4>10.2 – Pagamento à Vista</h4>
+    <p>Terá um desconto de 5% se for feito até 15 dias após a assinatura do contrato. Após esse prazo, o valor se manterá o mesmo. O prazo máximo para pagamento à vista será até JUNHO 2025.</p>
+    
+    <h4>10.3 – Pagamento com Boleto Bancário</h4>
+    <p>Pode ser feito em qualquer banco ou agência lotérica até a data de vencimento. Cada passageiro pode escolher a data de vencimento de seu boleto, sendo que o último boleto deve ser pago até 05 de outubro de 2025. Além disso, a cada parcela, será acrescido um valor de R$ 2,99 referente às taxas administrativas.</p>
+    
+    <h4>10.4 – Pagamento com Cartão de Crédito</h4>
+    <p>Podem ser feitos SEM JUROS na modalidade on-line, ou seja, através de um link. O link é enviado ao contratante e poderá ser feito de 5/5 ou de 6/6 parcelas. Para não comprometer o limite total do cartão, a empresa emitirá cobranças periódicas. Num primeiro momento, será enviado um link contendo metade do valor em 5 ou 6 parcelas, a depender da quantidade de parcelas escolhidas. Após o fim dessas parcelas, a empresa enviará outro link, contendo a outra metade no restante das parcelas.</p>
+    
+    <h4>10.5 – Pagamento e Juros</h4>
+    <p>Em alguns casos, o link de pagamento poderá ser enviado em nome do HOTEL PORTO BELLO PARK, CASA RESTAURANTE e/ou CAROLINA RESTAURANTE. Todos esses são os prestadores de serviços contratados pela empresa para a execução da viagem. Também é possível realizar o pagamento presencialmente, mas isso incluirá a cobrança de juros pela administradora do cartão, que serão calculados com base no número de parcelas escolhidas.</p>
+    
+<!DOCTYPE html>  
+<html lang="pt-BR">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Opções de Pagamento</title>  
+    <style>  
+        /* Estilo opcional para ocultar ou exibir o painel de boleto */  
+        #boleto_options {  
+            display: none; /* Mantém oculto inicialmente */  
+        }  
+    </style>  
+</head>  
+<body>  
+
+<h4>10.6 - VALORES DOS PACOTES REFERENTE À CLÁUSULA NONA</h4>  
+<div class="contract-container">  
+    <h2>Os Pacotes Referente à Cláusula Nona</h2>  
+
+    <h3>Pacotes de Viagem</h3>  
+    <form>  
+        <label for="pacote">Escolha o seu pacote:</label>  
+        <select id="pacote" name="pacote" required>  
+            <option value="" disabled selected>Selecione um pacote</option>  
+            <option value="ouro">PACOTE OURO - R$ 4.200,00</option>  
+            <option value="prata">PACOTE PRATA - R$ 3.200,00</option>  
+        </select>  
+    </form>  
+
+    <h3>Escolha sua Condição de Pagamento:</h3>  
+    <form>  
+        <label for="condicao_pagamento">Selecione a condição de pagamento:</label>  
+        <select id="condicao_pagamento" name="condicao_pagamento" required onchange="showOptions()">  
+            <option value="" disabled selected>Selecione uma forma de pagamento</option>  
+            <option value="avista">PAGAMENTO À VISTA</option>  
+            <option value="cartao">PAGAMENTO EM CARTÃO DE CRÉDITO</option>  
+            <option value="boleto">PAGAMENTO EM BOLETO BANCÁRIO</option>  
+        </select>  
+
+        <div id="cartao_options" style="display:none;">  
+            <label for="parcelas">Selecione a quantidade de parcelas:</label>  
+            <select id="parcelas" name="parcelas">  
+                <option value="1">1x</option>  
+                <option value="2">2x</option>  
+                <option value="3">3x</option>  
+                <option value="4">4x</option>  
+                <option value="5">5x</option>  
+                <option value="6">6x</option>  
+                <option value="7">7x</option>  
+                <option value="8">8x</option>  
+                <option value="9">9x</option>  
+                <option value="10">10x</option>  
+                <option value="11">11x</option>  
+                <option value="12">12x</option>  
+            </select>  
+        </div>  
+
+        <div id="boleto_options">  
+            <h3>Data de Vencimento do Boleto:</h3>  
+            <label for="inicio_boleto">Início do pagamento:</label>  
+            <select id="inicio_boleto" name="inicio_boleto" onchange="atualizarParcelas()">  
+                <option value="marco">MARÇO</option>  
+                <option value="abril">ABRIL</option>  
+                <option value="posterior">POSTERIOR</option>  
+            </select>  
+
+            <label for="parcelas_boleto">Quantidade de parcelas:</label>  
+            <select id="parcelas_boleto" name="parcelas_boleto">  
+                <!-- As opções serão preenchidas dinamicamente -->  
+            </select>  
+
+            <label for="data_vencimento">Escolha a data de vencimento:</label>  
+            <input type="date" id="data_vencimento" name="data_vencimento" required>  
+
+            <p>Ciente que, a cada parcela em BOLETO BANCÁRIO, será acrescida uma taxa de R$ 2,99.</p>  
+            <label>  
+                <input type="checkbox" name="cientizacao" required>  
+                Estou ciente desta condição.  
+            </label>  
+        </div>  
+    </form>  
+</div>  
+
+<script>  
+    const inicioBoleto = document.getElementById('inicio_boleto');  
+    const parcelasBoleto = document.getElementById('parcelas_boleto');  
+    const condicaoPagamento = document.getElementById('condicao_pagamento');  
+    const boletoOptions = document.getElementById('boleto_options');  
+
+    // Função para mostrar ou ocultar opções de pagamento  
+    function showOptions() {  
+        if (condicaoPagamento.value === 'boleto') {  
+            boletoOptions.style.display = 'block'; // Exibe opções de boleto  
+        } else {  
+            boletoOptions.style.display = 'none'; // Oculta opções de boleto  
+        }  
+
+        // Oculta opções de cartão quando boleto é selecionado  
+        const cartaoOptions = document.getElementById('cartao_options');  
+        if (condicaoPagamento.value === 'cartao') {  
+            cartaoOptions.style.display = 'block'; // Exibe opções de cartão  
+        } else {  
+            cartaoOptions.style.display = 'none'; // Oculta opções de cartão  
+        }  
+    }  
+
+    // Função para atualizar o menu suspenso de parcelas com base na seleção de início  
+    function atualizarParcelas() {  
+        const valorSelecionado = inicioBoleto.value;  
+        let maxParcelas;  
+
+        // Define o máximo de parcelas com base na opção selecionada  
+        if (valorSelecionado === 'marco') {  
+            maxParcelas = 8;  
+        } else if (valorSelecionado === 'abril') {  
+            maxParcelas = 7;  
+        } else if (valorSelecionado === 'posterior') {  
+            maxParcelas = 6;  
+        }  
+
+        // Limpa as opções atuais  
+        parcelasBoleto.innerHTML = '';  
+
+        // Adiciona as novas opções ao menu suspenso  
+        for (let i = 1; i <= maxParcelas; i++) {  
+            const option = document.createElement('option');  
+            option.value = i;  
+            option.textContent = `${i < 10 ? '0' : ''}${i}x`; // Adiciona 0 a parcelas menores que 10  
+            parcelasBoleto.appendChild(option);  
+        }  
+    }  
+
+    // Adiciona ouvinte de eventos para quando a seleção mudar  
+    inicioBoleto.addEventListener('change', atualizarParcelas);  
+</script>  
+
+</body>  
+</html>  
+</form>  
+
+<script>  
+    function showOptions() {  
+        var pagamento = document.getElementById("condicao_pagamento").value;  
+        var cartaoOptions = document.getElementById("cartao_options");  
+        var boletoOptions = document.getElementById("boleto_options");  
+        
+        // Oculta todas as opções inicialmente  
+        cartaoOptions.style.display = "none";  
+        boletoOptions.style.display = "none";  
+        
+        // Mostra as opções correspondentes à escolha do pagamento  
+        if (pagamento === "cartao") {  
+            cartaoOptions.style.display = "block";  
+        } else if (pagamento === "boleto") {  
+            boletoOptions.style.display = "block";  
+        }  
+    }  
+</script>  
+<!DOCTYPE html>  
+<html lang="pt-BR">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Assinatura Digital</title>  
+    <style>  
+        .canvas-container {  
+            border: 1px solid #000;  
+            width: 300px;  
+            height: 150px;  
+        }  
+    </style>  
+</head>  
+<body>  
+<!DOCTYPE html>  
+<html lang="pt-BR">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Assinatura Digital</title>  
+    <style>  
+        .canvas-container {  
+            border: 1px solid #000;  
+            width: 100%;  
+            height: 150px;  
+        }  
+        .modal {  
+            display: none;  
+            position: fixed;  
+            z-index: 1;  
+            left: 0;  
+            top: 0;  
+            width: 100%;  
+            height: 100%;  
+            overflow: auto;  
+            background-color: rgb(0,0,0);  
+            background-color: rgba(0,0,0,0.4);  
+            padding-top: 60px;  
+        }  
+        .modal-content {  
+            background-color: #fefefe;  
+            margin: 5% auto;  
+            padding: 20px;  
+            border: 1px solid #888;  
+            width: 80%;  
+        }  
+    </style>  
+</head>  
+<body>  
+
+<!DOCTYPE html>  
+<html lang="pt-BR">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Assinatura Eletrônica</title>  
+    <style>  
+        body {  
+            font-family: Arial, sans-serif;  
+        }  
+        .canvas-container {  
+            border: 1px solid #000;  
+            width: 100%;  
+            height: 200px;  
+            position: relative;  
+        }  
+        .modal {  
+            display: none;  
+            position: fixed;  
+            z-index: 1;  
+            left: 0;  
+            top: 0;  
+            width: 100%;  
+            height: 100%;  
+            overflow: auto;  
+            background-color: rgba(0, 0, 0, 0.4);  
+            padding-top: 60px;  
+        }  
+        .modal-content {  
+            background-color: #fefefe;  
+            margin: 5% auto;  
+            padding: 20px;  
+            border: 1px solid #888;  
+            width: 80%;  
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  
+        }  
+        button {  
+            margin-top: 10px;  
+        }  
+    </style>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/4.0.0/signature_pad.umd.min.js"></script>  
+</head>  
+<body>  
+<!DOCTYPE html>  
+<html lang="pt-BR">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Assinatura Eletrônica</title>  
+    <style>  
+        body {  
+            font-family: Arial, sans-serif;  
+        }  
+        .canvas-container {  
+            border: 1px solid #000;  
+            width: 100%;  
+            height: 200px;  
+            position: relative;  
+        }  
+        .modal {  
+            display: none; /* Inicialmente oculto */  
+            position: fixed;  
+            z-index: 1;  
+            left: 0;  
+            top: 0;  
+            width: 100%;  
+            height: 100%;  
+            overflow: auto;  
+            background-color: rgba(0, 0, 0, 0.4);  
+            padding-top: 60px;  
+        }  
+        .modal-content {  
+            background-color: #fefefe;  
+            margin: 5% auto;  
+            padding: 20px;  
+            border: 1px solid #888;  
+            width: 80%;  
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  
+        }  
+        button {  
+            margin-top: 10px;  
+        }  
+    </style>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/4.0.0/signature_pad.umd.min.js"></script>  
+</head>  
+<body>  
+
+<!-- Seção de Uploads -->
+<h3>Assinatura:</h3>
+<button class="openModal" data-modal="signatureModal">Carregar Assinatura</button>
+<div id="signatureModal" class="modal" style="display:none;">
+    <div class="modal-content">
+        <h3>Upload de Assinatura</h3>
+        <input type="file" id="signatureUpload" accept="image/*" capture="environment">
+        <div id="uploadedSignatureContainer" class="upload-container" style="display:none;">
+            <h4>Assinatura Carregada:</h4>
+            <img id="uploadedSignature" alt="Imagem da assinatura" style="max-width: 100%; height: auto;"/>
+        </div>
+        <button class="closeModal">Fechar</button>
+    </div>
+</div>
+
+<h3>Foto do Contratante:</h3>
+<button class="openModal" data-modal="contractorPhotoModal">Carregar Foto</button>
+<div id="contractorPhotoModal" class="modal" style="display:none;">
+    <div class="modal-content">
+        <h3>Upload da Foto do Contratante</h3>
+        <input type="file" id="contractorPhotoUpload" accept="image/*" capture="environment">
+        <div id="uploadedContractorPhotoContainer" class="upload-container" style="display:none;">
+            <h4>Foto Carregada:</h4>
+            <img id="uploadedContractorPhoto" alt="Foto do contratante" style="max-width: 100%; height: auto;"/>
+        </div>
+        <button class="closeModal">Fechar</button>
+    </div>
+</div>
+
+<h3>Foto do Documento do Contratante:</h3>
+<button class="openModal" data-modal="documentModal">Carregar Documento</button>
+<div id="documentModal" class="modal" style="display:none;">
+    <div class="modal-content">
+        <h3>Upload do Documento do Contratante</h3>
+        <input type="file" id="documentUpload" accept="image/*" capture="environment">
+        <div id="uploadedDocumentContainer" class="upload-container" style="display:none;">
+            <h4>Documento Carregado:</h4>
+            <img id="uploadedDocument" alt="Documento do contratante" style="max-width: 100%; height: auto;"/>
+        </div>
+        <button class="closeModal">Fechar</button>
+    </div>
+</div>
+
+<!-- Botão para enviar o contrato -->
+<button id="sendContract" style="background-color: red; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 18px;">
+    ENVIAR CONTRATO
+</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Função para abrir/fechar modais
+        document.querySelectorAll(".openModal").forEach(button => {
+            button.addEventListener("click", () => {
+                const modalId = button.getAttribute("data-modal");
+                document.getElementById(modalId).style.display = "block";
+            });
+        });
+
+        document.querySelectorAll(".closeModal").forEach(button => {
+            button.addEventListener("click", () => {
+                button.closest(".modal").style.display = "none";
+            });
+        });
+
+        // Processar uploads
+        function handleFileUpload(inputId, imgId, containerId) {
+            document.getElementById(inputId).addEventListener("change", (event) => {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = (e) => {
+                        document.getElementById(imgId).src = e.target.result;
+                        document.getElementById(containerId).style.display = "block";
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+        }
+
+        handleFileUpload("signatureUpload", "uploadedSignature", "uploadedSignatureContainer");
+        handleFileUpload("contractorPhotoUpload", "uploadedContractorPhoto", "uploadedContractorPhotoContainer");
+        handleFileUpload("documentUpload", "uploadedDocument", "uploadedDocumentContainer");
+
+        // Enviar contrato como PDF
+        document.getElementById("sendContract").addEventListener("click", async () => {
+            const content = document.body;
+            const canvas = await html2canvas(content);
+            const imgData = canvas.toDataURL("image/png");
+
+            const { jsPDF } = window.jspdf;
+            const pdf = new jsPDF();
+            pdf.addImage(imgData, 'PNG', 0, 0);
+            const pdfBlob = pdf.output('blob');
+
+            // Criar FormData para envio para Google Apps Script
+            const formData = new FormData();
+            formData.append('file', pdfBlob, 'contrato.pdf');
+            formData.append('mimeType', 'application/pdf');
+            formData.append('filename', 'contrato_assinado.pdf');
+
+            // Enviar o arquivo PDF para o Google Apps Script
+            fetch('https://script.google.com/macros/s/AKfycbzfp5pfoaA3xa1TAqmFBPr5jG1bslplsZyYgT-1VV5amTOl8dsg8r28WXDtEKwR4iqZ/exec', {
+                method: 'POST',
+                body: formData
+            }).then(response => response.text())
+              .then(data => {
+                  if (data) {
+                      alert('Contrato enviado com sucesso para o Google Drive!');
+                  } else {
+                      alert('Falha ao enviar contrato para o Google Drive.');
+                  }
+              })
+              .catch(error => {
+                  console.error('Erro:', error);
+                  alert('Erro ao enviar contrato para o Google Drive.');
+              });
+        });
+    });
+</script>
+</body>
+</html>

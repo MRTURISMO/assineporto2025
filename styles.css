@@ -1,0 +1,244 @@
+.contract-header {  
+    text-align: center; /* Centraliza a imagem no cabeçalho */  
+    margin-bottom: 20px; /* Adiciona espaço abaixo da imagem */  
+}  
+
+.header-image {  
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */  
+    height: auto; /* Mantém a proporção da imagem */  
+}  
+body {  
+    margin: 0;  
+    padding: 0;  
+    font-family: Arial, sans-serif;  
+}  
+
+.background {  
+    background-image: url('https://i.postimg.cc/ZRknhzP7/FUNDO-CAMISETA.png'); /* Link do fundo */  
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */  
+    background-position: center; /* Centraliza a imagem */  
+    height: 100vh; /* Altura total da tela */  
+    display: flex;  
+    flex-direction: column;  
+    justify-content: center;  
+    align-items: center;  
+    position: relative;  
+    color: white; /* Cor do texto para contraste */  
+}  
+
+header {  
+    text-align: center;  
+    position: relative;  
+}  
+
+.logo-container {  
+    animation: slide-down 1.5s ease forwards; /* Animação para a logo aparecer */  
+}  
+
+.logo {  
+    max-width: 200px; /* Ajuste o tamanho da logomarca conforme necessário */  
+    opacity: 0; /* Começa invisível para a animação */  
+    animation: fade-in 1.5s forwards; /* Adicionando uma animação de fade-in */  
+}  
+
+@keyframes slide-down {  
+    0% {  
+        transform: translateY(-100px);  
+        opacity: 0; /* Inicia invisível */  
+    }  
+    100% {  
+        transform: translateY(0);  
+        opacity: 1; /* Termina visível */  
+    }  
+}  
+
+@keyframes fade-in {  
+    from {  
+        opacity: 0; /* Início invisível */  
+    }  
+    to {  
+        opacity: 1; /* Final visível */  
+    }  
+}  
+
+main {  
+    text-align: center;  
+}  
+
+.access-contract {  
+    padding: 15px 30px;  
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com leve transparência */  
+    color: #007BFF; /* Cor do texto do botão */  
+    border: none;  
+    border-radius: 5px;  
+    text-decoration: none;  
+    font-weight: bold;  
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */  
+}  
+
+.access-contract:hover {  
+    background-color: #007BFF; /* Muda a cor do fundo ao passar o mouse */  
+    color: white; /* Texto branco ao passar o mouse */  
+}  
+
+footer {  
+    text-align: center;  
+    padding: 20px;  
+    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para o rodapé */  
+    color: white;  
+    position: relative;  
+    bottom: 0;  
+    width: 100%;  
+}  
+
+body {  
+    margin: 0;  
+    padding: 0;  
+    font-family: Arial, sans-serif;  
+    background-color: #f0
+/* styles.css */  
+
+body, html {  
+    margin: 0;  
+    padding: 0;  
+    height: 100%;  
+}  
+
+.background {  
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;  
+    justify-content: center;  
+    height: 100%;  
+    text-align: center;  
+}  
+
+.logo {  
+    width: 70%; /* Ajuste esse valor conforme necessário */  
+    max-width: 800px; /* Defina um limite máximo se desejar */  
+    height: auto; /* Mantém a relação de aspecto */  
+}  
+
+h1 {  
+    font-size: 2rem; /* Ajuste o tamanho do título */  
+    margin: 10px 0;  
+}  
+
+h2 {  
+    font-size: 1.5rem; /* Ajuste o tamanho do subtítulo */  
+}  
+
+.access-contract {  
+    display: inline-block;  
+    padding: 10px 20px;  
+    background-color: #007BFF; /* Cor de fundo */  
+    color: white; /* Cor do texto */  
+    text-decoration: none; /* Remove o sublinhado */  
+    border-radius: 5px; /* Borda arredondada */  
+}  
+
+.access-contract:hover {  
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */  
+}  
+
+footer {  
+    margin-top: auto; /* Faz o rodapé se mover para o final */  
+}  
+
+.clausula-title {  
+    position: relative; /* Necessário para posicionar o pseudo-elemento */  
+    display: inline-block; /* Para que o sublinhado atue apenas sobre o texto */  
+}  
+
+.clausula-title::after {  
+    content: ""; /* Cria um pseudo-elemento */  
+    display: block; /* Faz o pseudo-elemento ocupar espaço */  
+    width: 100%; /* Faz o sublinhado ter a mesma largura do texto */  
+    height: 2px; /* Espessura do sublinhado */  
+    background-color: blue; /* Cor do sublinhado */  
+    position: absolute; /* Permite posicionar o sublinhado */  
+    left: 0; /* Alinha à esquerda */  
+    bottom: -5px; /* Distância do texto */  
+}  
+/* Reset de margem e padding */  
+* {  
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box;  
+}  
+
+/* Estilização do body */  
+body {  
+    font-family: Arial, sans-serif;  
+    line-height: 1.6;  
+}  
+
+/* Estilização do container de fundo */  
+.background {  
+    padding: 20px; /* Adiciona um espaço interno */  
+}  
+
+/* Estilos do cabeçalho */  
+header {  
+    text-align: center;  
+}  
+
+.logo {  
+    max-width: 100%;  
+    height: auto; /* Garante que a imagem se ajuste à largura do contêiner */  
+}  
+
+/* Estilização do título principal */  
+h1 {  
+    font-size: 2.5rem; /* Tamanho da fonte para desktop */  
+}  
+
+/* Estilos para dispositivos menores */  
+@media only screen and (max-width: 768px) {  
+    h1 {  
+        font-size: 2rem; /* Reduz o tamanho da fonte em dispositivos menores */  
+    }  
+}  
+
+/* Estilos do main */  
+main {  
+    text-align: center;  
+    margin: 20px 0; /* Espaçamento superior/inferior */  
+}  
+
+.access-contract {  
+    display: inline-block;  
+    background-color: #007BFF; /* Cor de fundo para o botão */  
+    color: white;  
+    padding: 10px 20px; /* Espaçamento no botão */  
+    text-decoration: none;  
+    border-radius: 5px; /* Bordas arredondadas */  
+    transition: background-color 0.3s; /* Transição suave ao passar o mouse */  
+}  
+
+.access-contract:hover {  
+    background-color: #0056b3; /* Cor do botão ao passar o mouse */  
+}  
+
+/* Estilos do rodapé */  
+footer {  
+    text-align: center;  
+    margin-top: 20px; /* Espaçamento acima do rodapé */  
+    font-size: 0.9rem;  
+}  
+
+/* Estilos específicos para dispositivos menores */  
+@media only screen and (max-width: 480px) {  
+    h2 {  
+        font-size: 1.5rem; /* Reduz o tamanho da fonte do subtítulo */  
+    }  
+
+    .access-contract {  
+        padding: 8px 15px; /* Ajusta o padding do botão */  
+        font-size: 1rem; /* Tamanho da fonte do texto */  
+    }  
+}  
+#signature-pad {  
+    width: 100%; /* Para tornar o canvas responsivo */  
+    height: auto; /* Ajusta a altura automaticamente */  
+}  
