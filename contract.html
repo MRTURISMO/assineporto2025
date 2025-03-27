@@ -53,11 +53,53 @@
         <label for="orgaoExpedidorContratante">ÓRGÃO EXPEDIDOR:</label>
         <input type="text" id="orgaoExpedidorContratante" name="orgaoExpedidorContratante" required>
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Endereço</title>
+    <script>
+        // Função que faz a consulta do CEP e preenche o endereço
+        function buscarEndereco() {
+            var cep = document.getElementById("cepContratante").value.replace("-", ""); // Remove o "-" do CEP
+            if (cep.length === 8) { // Verifica se o CEP tem 8 dígitos
+                var url = `https://viacep.com.br/ws/${cep}/json/`;
+                
+                fetch(url)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (!data.erro) {
+                            // Preenche os campos do endereço
+                            document.getElementById("enderecoContratante").value = data.logradouro;
+                            // Você pode adicionar outros campos como bairro, cidade e estado se necessário
+                        } else {
+                            alert("CEP não encontrado!");
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Erro ao consultar o CEP:', error);
+                        alert("Erro ao consultar o CEP. Tente novamente.");
+                    });
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <form>
+        <!-- Label e Campo para CEP (primeiro) -->
+        <label for="cepContratante">CEP:</label>
+        <input type="text" id="cepContratante" name="cepContratante" required maxlength="9" 
+               onblur="buscarEndereco()" placeholder="00000-000">
+
+        <!-- Label e Campo para Endereço (preenchido automaticamente) -->
         <label for="enderecoContratante">ENDEREÇO:</label>
         <input type="text" id="enderecoContratante" name="enderecoContratante" required>
+    </form>
 
-        <label for="cepContratante">CEP:</label>
-        <input type="text" id="cepContratante" name="cepContratante" required>
+</body>
+</html>
 
         <label for="telefoneContratante">TELEFONE / WHATSAPP:</label>
         <input type="text" id="telefoneContratante" name="telefoneContratante" required>

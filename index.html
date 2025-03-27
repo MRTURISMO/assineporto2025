@@ -14,7 +14,8 @@
         }
         
         body {
-            background-color: #f4f4f4;
+            background: url('https://i.postimg.cc/htmNjrss/FUNDO-CAMISETA.png') no-repeat center center fixed;
+            background-size: cover;
             text-align: center;
             padding: 20px;
         }
@@ -22,10 +23,8 @@
         .background {
             max-width: 800px;
             margin: auto;
-            background: #fff;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         
         .logo-container img {
@@ -35,6 +34,8 @@
         
         h1, h2 {
             margin: 20px 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
         
         .access-contract {
@@ -50,16 +51,10 @@
         footer {
             margin-top: 20px;
             font-size: 14px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
         
-        canvas {
-            border: 1px solid #000;
-            width: 100%;
-            max-width: 600px;
-            height: 200px;
-            margin-top: 20px;
-        }
-
         @media (max-width: 768px) {
             body {
                 padding: 10px;
@@ -83,63 +78,11 @@
         <main>  
             <h2>Acesse o seu Contrato</h2>  
             <a href="contract.html" class="access-contract">Clique aqui e acesse o contrato</a>  
-
-            <h2>Assine o Contrato</h2>
-            <canvas id="signature-pad"></canvas>
-            <button id="clear-signature">Limpar Assinatura</button>
-            <button id="submit-contract">Salvar Contrato</button>
         </main>  
 
         <footer>  
             <p>&copy; 2025 MR TURISMO</p>  
         </footer>  
     </div>  
-
-    <script>  
-        const canvas = document.getElementById('signature-pad');  
-        const ctx = canvas.getContext('2d');  
-        let isDrawing = false;  
-        let lastX = 0;  
-        let lastY = 0;  
-
-        ctx.strokeStyle = '#000'; 
-        ctx.lineWidth = 2;  
-
-        canvas.addEventListener('mousedown', (e) => {  
-            isDrawing = true;  
-            [lastX, lastY] = [e.offsetX, e.offsetY];  
-        });  
-
-        canvas.addEventListener('mousemove', (e) => {  
-            if (!isDrawing) return;  
-            ctx.beginPath();  
-            ctx.moveTo(lastX, lastY);  
-            ctx.lineTo(e.offsetX, e.offsetY);  
-            ctx.stroke();  
-            [lastX, lastY] = [e.offsetX, e.offsetY];  
-        });  
-
-        canvas.addEventListener('mouseup', () => {  
-            isDrawing = false;  
-        });  
-
-        canvas.addEventListener('mouseout', () => {  
-            isDrawing = false;  
-        });  
-
-        document.getElementById('clear-signature').addEventListener('click', () => {  
-            ctx.clearRect(0, 0, canvas.width, canvas.height);  
-        });  
-    </script>  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>  
-    <script>  
-        document.getElementById('submit-contract').addEventListener('click', () => {  
-            const { jsPDF } = window.jspdf;  
-            const pdf = new jsPDF();  
-            pdf.text("Contrato", 10, 10);  
-            pdf.addImage(canvas.toDataURL(), 'PNG', 10, 20, 180, 80);  
-            pdf.save("contrato.pdf");  
-        });  
-    </script>  
 </body>  
 </html>
