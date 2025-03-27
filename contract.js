@@ -52,3 +52,43 @@ document.getElementById('payment-form').addEventListener('submit', (e) => {
         alert('Por favor, selecione um método de pagamento.');  
     }  
 });  
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("sendContract").addEventListener("click", async () => {
+        const content = document.body;
+
+        // Captura a tela como imagem
+        html2canvas(content, { scale: 2 }).then((canvas) => {
+            const imgData = canvas.toDataURL("image/png");
+
+            // Gera o PDF
+            const { jsPDF } = window.jspdf;
+            const pdf = new jsPDF("p", "mm", "a4");
+            pdf.addImage(imgData, "PNG", 10, 10, 190, 0);
+            
+            // Converte para blob
+            const pdfBlob = pdf.output("blob");
+
+            // Cria o FormData para envio ao Google Drive
+            const formData = new FormData();
+            formData.append("file", pdfBlob, "contrato.pdf");
+
+            // Envia o PDF para o Google Drive via Google Apps Script
+            fetch("https://script.google.com/macros/s/AKfycbzfp5pfoaA3xa1TAqmFBPr5jG1bslplsZyYgT-1VV5amTOl8dsg8r28WXDtEKwR4iqZ/exec", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                if (data) {
+                    alert("Contrato enviado com sucesso para o Google Drive!");
+                } else {
+                    alert("Falha ao enviar contrato para o Google Drive.");
+                }
+            })
+            .catch(error => {
+                console.error("Erro:", error);
+                alert("Erro ao enviar contrato para o Google Drive.");
+            });
+        });
+    });
+});

@@ -56,4 +56,8 @@ app.post('/upload-pdf', async (req, res) => {
 // Inicie o servidor  
 app.listen(PORT, () => {  
     console.log(`Servidor rodando na porta ${PORT}`);  
+h3 {
+    font-weight: normal; /* Retira o negrito */
+}
+
 });  

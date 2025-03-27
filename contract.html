@@ -961,77 +961,54 @@
 </button>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0/html2canvas.min.js"></script>
+
 <script>
     document.addEventListener("DOMContentLoaded", () => {
-        // Função para abrir/fechar modais
-        document.querySelectorAll(".openModal").forEach(button => {
-            button.addEventListener("click", () => {
-                const modalId = button.getAttribute("data-modal");
-                document.getElementById(modalId).style.display = "block";
-            });
-        });
-
-        document.querySelectorAll(".closeModal").forEach(button => {
-            button.addEventListener("click", () => {
-                button.closest(".modal").style.display = "none";
-            });
-        });
-
-        // Processar uploads
-        function handleFileUpload(inputId, imgId, containerId) {
-            document.getElementById(inputId).addEventListener("change", (event) => {
-                const file = event.target.files[0];
-                if (file) {
-                    const reader = new FileReader();
-                    reader.onload = (e) => {
-                        document.getElementById(imgId).src = e.target.result;
-                        document.getElementById(containerId).style.display = "block";
-                    };
-                    reader.readAsDataURL(file);
-                }
-            });
-        }
-
-        handleFileUpload("signatureUpload", "uploadedSignature", "uploadedSignatureContainer");
-        handleFileUpload("contractorPhotoUpload", "uploadedContractorPhoto", "uploadedContractorPhotoContainer");
-        handleFileUpload("documentUpload", "uploadedDocument", "uploadedDocumentContainer");
-
-        // Enviar contrato como PDF
         document.getElementById("sendContract").addEventListener("click", async () => {
-            const content = document.body;
-            const canvas = await html2canvas(content);
-            const imgData = canvas.toDataURL("image/png");
+            const contractElement = document.querySelector(".background"); // Captura apenas o contrato
 
-            const { jsPDF } = window.jspdf;
-            const pdf = new jsPDF();
-            pdf.addImage(imgData, 'PNG', 0, 0);
-            const pdfBlob = pdf.output('blob');
+            if (!contractElement) {
+                alert("Erro: não foi possível encontrar o contrato.");
+                return;
+            }
 
-            // Criar FormData para envio para Google Apps Script
-            const formData = new FormData();
-            formData.append('file', pdfBlob, 'contrato.pdf');
-            formData.append('mimeType', 'application/pdf');
-            formData.append('filename', 'contrato_assinado.pdf');
+            try {
+                const canvas = await html2canvas(contractElement, { scale: 2 }); // Melhor qualidade
+                const imgData = canvas.toDataURL("image/png");
 
-            // Enviar o arquivo PDF para o Google Apps Script
-            fetch('https://script.google.com/macros/s/AKfycbzfp5pfoaA3xa1TAqmFBPr5jG1bslplsZyYgT-1VV5amTOl8dsg8r28WXDtEKwR4iqZ/exec', {
-                method: 'POST',
-                body: formData
-            }).then(response => response.text())
-              .then(data => {
-                  if (data) {
-                      alert('Contrato enviado com sucesso para o Google Drive!');
-                  } else {
-                      alert('Falha ao enviar contrato para o Google Drive.');
-                  }
-              })
-              .catch(error => {
-                  console.error('Erro:', error);
-                  alert('Erro ao enviar contrato para o Google Drive.');
-              });
+                const { jsPDF } = window.jspdf;
+                const pdf = new jsPDF("p", "mm", "a4");
+
+                const imgWidth = 210;
+                const imgHeight = (canvas.height * imgWidth) / canvas.width;
+                pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
+                const pdfBlob = pdf.output("blob");
+
+                // Criar FormData para envio ao Google Apps Script
+                const formData = new FormData();
+                formData.append("file", pdfBlob, "contrato.pdf");
+                formData.append("mimeType", "application/pdf");
+                formData.append("filename", "contrato_assinado.pdf");
+
+                // Enviar o arquivo PDF para o Google Apps Script
+                const response = await fetch("https://script.google.com/macros/s/AKfycbzfp5pfoaA3xa1TAqmFBPr5jG1bslplsZyYgT-1VV5amTOl8dsg8r28WXDtEKwR4iqZ/exec", {
+                    method: "POST",
+                    body: formData
+                });
+
+                const result = await response.text();
+                if (result) {
+                    alert("Contrato enviado com sucesso para o Google Drive!");
+                } else {
+                    alert("Falha ao enviar contrato para o Google Drive.");
+                }
+            } catch (error) {
+                console.error("Erro ao processar o contrato:", error);
+                alert("Erro ao gerar ou enviar o contrato.");
+            }
         });
     });
 </script>
-</body>
-</html>
+<script src="contract.js"></script>
+
